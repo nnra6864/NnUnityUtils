@@ -31,9 +31,9 @@ Project
 
 2. Add the following to `Packages/manifest.json` dependencies section
     ```json
-    "com.nnra.nn-unity-utils": "file:../../Modules/NnUnityUtils",
-    "com.nnra.nn-unity-easings": "file:../../Modules/NnUnityEasings",
-    "com.nnra.nn-unity-text-utils": "file:../../Modules/NnUnityTextUtils",
+    "com.nnra6864.nn-unity-utils": "file:../../Modules/NnUnityUtils",
+    "com.nnra6864.nn-unity-easings": "file:../../Modules/NnUnityEasings",
+    "com.nnra6864.nn-unity-text-utils": "file:../../Modules/NnUnityTextUtils",
     ```
 
 # ☦ Ι̅Ϲ̅ Χ̅Ϲ̅ ΝΙΚΑ — Ὁ Ὤν
