@@ -1,9 +1,10 @@
 {
-    "name": "nnra.NnUtils",
+    "name": "nnra6864.NnUnityUtils",
     "rootNamespace": "",
     "references": [
         "Unity.TextMeshPro",
-        "Unity.RenderPipelines.Core.Runtime"
+        "Unity.RenderPipelines.Core.Runtime",
+        "nnra6864.NnUnityEasings"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
