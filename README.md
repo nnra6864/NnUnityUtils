@@ -16,9 +16,20 @@ git submodule update --init --recursive
 
 In directory of your choice run:
 ```sh
-git clone --recursive https://www.github.com/nnra6864/NnUtils
+git clone --recursive https://www.github.com/nnra6864/NnUnityUtils
 ```
 
-## Dependencies
+# ☦ Ι̅Ϲ̅ Χ̅Ϲ̅ ΝΙΚΑ — Ὁ Ὤν
 
-NnUtils also has some dependencies that can't be automatically installed.
+Εἰς δόξαν τοῦ Θεοῦ<br>
+*To the glory of God*
+
+Τῇ Ὑπεραγίᾳ Θεοτόκῳ δόξα<br>
+*Glory to the Most Holy Theotokos*
+
+Δόξα τῷ Θεῷ πάντων ἕνεκεν<br>
+*Glory to God for all things*
+
+ΑΜΗΝ
+
+☦
