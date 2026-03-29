@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using NnUtils.Modules.Easings;
+using NnUnityEasings;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.Networking;
@@ -79,17 +79,17 @@ namespace NnUtils.Scripts
         /// </summary>
         /// <param name="lerpPos">Reference to the lerp pos</param>
         /// <param name="lerpTime">Lerp time in seconds</param>
-        /// <param name="easingType">Applied easing</param>
+        /// <param name="easing">Applied easing</param>
         /// <param name="curve">Curve applied to the return value</param>
         /// <param name="unscaled">Uses <see cref="Time.unscaledDeltaTime"/> if true</param>
         /// <param name="multiplier">Multiplies everything, can be used to handle pausing for example</param>
         /// <returns>Eased lerp position</returns>
-        public static float Tween(ref float lerpPos, float lerpTime = 1, EasingType easingType = EasingType.Linear, AnimationCurve curve = null, bool unscaled = false, float multiplier = 1)
+        public static float Tween(ref float lerpPos, float lerpTime = 1, Easing easing = Easing.Linear, AnimationCurve curve = null, bool unscaled = false, float multiplier = 1)
         {
             if (lerpTime == 0) lerpPos = 1;
             else lerpPos = Mathf.Clamp01(lerpPos += (unscaled ?
                 Time.unscaledDeltaTime : Time.deltaTime) / lerpTime * multiplier);
-            var t = EasingFunctions.Ease(lerpPos, easingType);
+            var t = Easings.Ease(lerpPos, easing);
             return curve == null ? t : curve.Evaluate(t);
         }
 
@@ -98,20 +98,20 @@ namespace NnUtils.Scripts
         /// </summary>
         /// <param name="lerpPos">Reference to the lerp pos</param>
         /// <param name="lerpTime">Lerp time in seconds</param>
-        /// <param name="easingType">Applied easing</param>
+        /// <param name="easing">Applied easing</param>
         /// <param name="curve">Curve applied to the return value</param>
         /// <param name="unscaled">Uses <see cref="Time.unscaledDeltaTime"/> if true</param>
         /// <param name="invertEasing">If ture, easing will be applied to (1 - lerpPos)</param>
         /// <param name="multiplier">Multiplies everything, can be used to handle pausing for example</param>
         /// <returns>Eased lerp position</returns>
         public static float ReverseTween(ref float lerpPos, float lerpTime = 1,
-            EasingType easingType = EasingType.Linear, AnimationCurve curve = null,
+            Easing easing = Easing.Linear, AnimationCurve curve = null,
             bool invertEasing = true, bool unscaled = false, float multiplier = 1)
         {
             if (lerpTime == 0) lerpPos = 0;
             else lerpPos = Mathf.Clamp01(lerpPos -= (unscaled ?
                 Time.unscaledDeltaTime : Time.deltaTime) / lerpTime * multiplier);
-            var t = EasingFunctions.Ease(invertEasing ? 1 - lerpPos : lerpPos, easingType);
+            var t = Easings.Ease(invertEasing ? 1 - lerpPos : lerpPos, easing);
             t = invertEasing ? 1 - t : t;
             return curve == null ? t : curve.Evaluate(t);
         }

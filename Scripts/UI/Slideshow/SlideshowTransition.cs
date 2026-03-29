@@ -1,5 +1,5 @@
 using System;
-using NnUtils.Modules.Easings;
+using NnUnityEasings;
 
 namespace NnUtils.Scripts.UI.Slideshow
 {
@@ -8,11 +8,11 @@ namespace NnUtils.Scripts.UI.Slideshow
     {
         public SlideshowTransitionType TransitionType;
         public float Duration;
-        public EasingType Easing;
+        public Easing Easing;
 
-        public SlideshowTransition() : this(SlideshowTransitionType.None, 0, EasingType.Linear) { }
+        public SlideshowTransition() : this(SlideshowTransitionType.None, 0, Easing.Linear) { }
 
-        public SlideshowTransition(SlideshowTransitionType transitionType, float duration, EasingType easing)
+        public SlideshowTransition(SlideshowTransitionType transitionType, float duration, Easing easing)
         {
             TransitionType = transitionType;
             Duration = duration;

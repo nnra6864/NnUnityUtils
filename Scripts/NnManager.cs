@@ -1,4 +1,3 @@
-using NnUtils.Modules.JSONUtils.Scripts.Types.Components.UI.Image;
 using NnUtils.Scripts.UI;
 using UnityEngine;
 
@@ -15,7 +14,7 @@ namespace NnUtils.Scripts
             {
                 // Return the instance if it's not null
                 if (_instance != null) return _instance;
-                
+
                 // Try to find an instance and return it
                 _instance = FindFirstObjectByType<NnManager>();
                 if (_instance != null) return _instance;
@@ -26,7 +25,7 @@ namespace NnUtils.Scripts
                 return _instance;
             }
         }
-        
+
         private void Awake()
         {
             // If no instance is found, assign this and don't destroy it on load
