@@ -1,6 +1,3 @@
-[submodule "Modules/JSONUtils"]
-	path = Modules/JSONUtils
-	url = ../JSONUtils
 [submodule "Modules/TextUtils"]
 	path = Modules/TextUtils
 	url = ../TextUtils
