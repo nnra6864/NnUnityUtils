@@ -1,6 +1,3 @@
-[submodule "Modules/Easings"]
-	path = Modules/Easings
-	url = ../Easings
 [submodule "Modules/UnityTextUtils"]
 	path = Modules/UnityTextUtils
 	url = ../../nnra6864/UnityTextUtils
