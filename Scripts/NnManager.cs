@@ -16,7 +16,7 @@ namespace NnUtils.Scripts
                 if (_instance != null) return _instance;
 
                 // Try to find an instance and return it
-                _instance = FindFirstObjectByType<NnManager>();
+                _instance = FindAnyObjectByType<NnManager>();
                 if (_instance != null) return _instance;
 
                 // Create a new object, don't destroy it on load, assign it to _instance and return it
